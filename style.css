@@ -600,12 +600,12 @@ a:hover, a:active {
 	content: "";
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(to right, #ee2852,  #d100df, #ee2852);
+	background-image: linear-gradient(to right, #252062,  #252062, #252062);
 	background-size: 220% 150%;
 	text-transform: uppercase;
 	display: inline-block;
 	color: #ffffff !important;
-	background-color: #ee2852;
+	background-color: #252062;
 	z-index: -1;
 	transition: all 0.35s ease-in-out;
 }
@@ -746,7 +746,7 @@ a:hover, a:active {
 
 .torch-red .btn.btn-theme.effect {
 	color: #ffffff;
-	border: 2px solid #ee2852;
+	border: 2px solid #252062;
 	overflow: hidden;
 	position: relative;
 }
@@ -758,7 +758,7 @@ a:hover, a:active {
 	content: "";
 	height: 100%;
 	width: 100%;
-	background: #ee2852;
+	background: #252062;
 	z-index: -1;
 	transition: all 0.35s ease-in-out;
 }
@@ -795,7 +795,7 @@ a:hover, a:active {
 
 .torch-red .shadow .btn.btn-theme.effect:hover {
 	border: 2px solid #ffffff;
-	color: #ee2852;
+	color: #252062;
 	background: transparent;
 }
 
@@ -949,7 +949,7 @@ button, button:focus {
 }
 
 .torch-red .site-heading h4 {
-	color: #ee2852;
+	color: #252062;
 	background: linear-gradient(90deg, rgba(238,40,82,1) 0%, rgba(166,23,153,1) 100%);
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -980,7 +980,7 @@ button, button:focus {
 }
 
 .torch-red .site-heading .devider {
-	background: #ee2852;
+	background: #252062;
 }
 
 .site-heading.light .devider {
@@ -998,7 +998,7 @@ button, button:focus {
 }
 
 .torch-red .site-heading .devider:before {
-	background: #ee2852;
+	background: #252062;
 }
 
 .area-title {
@@ -1732,7 +1732,7 @@ body,
 }
 
 .torch-red .banner-area .carousel-indicators.theme li.active {
-	border: 2px solid #ee2852;
+	border: 2px solid #252062;
 }
 
 .banner-area .carousel-indicators li::after {
@@ -1758,7 +1758,7 @@ body,
 }
 
 .torch-red .banner-area .carousel-indicators.theme li::after {
-	background: #ee2852;
+	background: #252062;
 }
 
 .double-items > .row div {
@@ -1829,8 +1829,8 @@ body,
 }
 
 .torch-red .banner-area.text-default h4 {
-	color: #ee2852;
-	background: linear-gradient(90deg, #ee2852 0%, #d100df 37%);
+	color: #252062;
+	background: linear-gradient(90deg, #252062 0%, #252062 37%);
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	background-clip: text;
@@ -2067,7 +2067,7 @@ body,
 }
 
 .torch-red .video-play-button i {
-	color: #ee2852;
+	color: #252062;
 }
 
 .video-play-button.theme i {
@@ -2378,7 +2378,7 @@ body,
 }
 
 .torch-red .about-items .thumb .successr-ate {
-	background: #ee2852;
+	background: #252062;
 }
 
 .about-items .thumb .successr-ate i {
@@ -2407,7 +2407,7 @@ body,
 }
 
 .torch-red .about-area .info > h4 {
-	color: #ee2852;
+	color: #252062;
 	background: linear-gradient(90deg, rgba(238,40,82,1) 0%, rgba(166,23,153,1) 100%);
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -2459,7 +2459,7 @@ body,
 }
 
 .torch-red .about-area .info li::after {
-	color: #ee2852;
+	color: #252062;
 }
 
 .about-area .info li h5 {
@@ -2765,7 +2765,7 @@ body,
 }
 
 .torch-red .features-area .features-content .top span {
-	color: #ee2852;
+	color: #252062;
 }
 
 .features-area .features-content .top span::after {
@@ -2819,9 +2819,9 @@ body,
 }
 
 .torch-red .features-area .item:hover a::before {
-	border-top-color: #ee2852;
-	border-right-color: #ee2852;
-	border-bottom-color: #ee2852;
+	border-top-color: #252062;
+	border-right-color: #252062;
+	border-bottom-color: #252062;
 }
 
 .features-area .item a::after {
@@ -2837,7 +2837,7 @@ body,
 }
 
 .torch-red .features-area .item:hover  a::after {
-	border-top: 2px solid #ee2852;
+	border-top: 2px solid #252062;
 }
 
 .features-area .item:hover a {
@@ -2907,7 +2907,7 @@ body,
 }
 
 .torch-red .services-area .services-items .item .info > i {
-	background: #ee2852;
+	background: #252062;
 }
 
 .services-area .services-items .item .info > i::after {
@@ -2924,7 +2924,7 @@ body,
 }
 
 .torch-red .services-area .services-items .item .info > i::after {
-	background: #ee2852;
+	background: #252062;
 }
 
 .services-area .services-items .item h4 {
@@ -2976,7 +2976,7 @@ body,
 }
 
 .torch-red .services-area .services-items .single-item .item::after {
-	background: #ee2852;
+	background: #252062;
 }
 
 .services-area .services-items .single-item .item i,
@@ -2999,7 +2999,7 @@ body,
 }
 
 .torch-red .services-area .services-items .single-item .item:hover i {
-	color: #ee2852;
+	color: #252062;
 }
 
 .services-area .services-items .single-item .item:hover span,
@@ -3374,7 +3374,7 @@ body,
 
 .torch-red .default-services-area .item .info i {
 	background: rgba(238, 40, 82, 0.07);
-	color: #ee2852;
+	color: #252062;
 }
 
 .default-services-area .item .info p {
@@ -3864,7 +3864,7 @@ body,
 }
 
 .torch-red .choose-us-area .thumb .transform-text h2 {
-	color: #ee2852;
+	color: #252062;
 }
 
 .choose-us-area .info .award {
@@ -3891,7 +3891,7 @@ body,
 }
 
 .torch-red .choose-us-area .info .award i {
-	color: #ee2852;
+	color: #252062;
 	-webkit-background-clip: inherit;
 	-moz-background-clip: inherit;
 	background-clip: inherit;
@@ -3916,7 +3916,7 @@ body,
 }
 
 .torch-red .choose-us-area .info h4 {
-	color: #ee2852;
+	color: #252062;
 	background: linear-gradient(90deg, rgba(238,40,82,1) 0%, rgba(166,23,153,1) 100%);
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -3961,7 +3961,7 @@ body,
 }
 
 .torch-red .partner-area .item-box.red::after {
-	background: #ee2852;
+	background: #252062;
 }
 
 .partner-area .item-box::before {
@@ -4084,7 +4084,7 @@ body,
 }
 
 .torch-red .team-area .team-items .thumb {
-	border-bottom: 3px solid #ee2852;
+	border-bottom: 3px solid #252062;
 }
 
 .team-area .team-items .thumb .share {
@@ -4101,7 +4101,7 @@ body,
 }
 
 .torch-red .team-area .team-items .thumb .share {
-	background: #ee2852;
+	background: #252062;
 }
 
 .team-area .team-items .item:hover .thumb .share {
@@ -4431,7 +4431,7 @@ body,
 }
 
 .torch-red .testimonials-area .row > .info h4 {
-	color: #ee2852;
+	color: #252062;
 }
 
 .testimonials-area .row > .info h2 {
@@ -4450,7 +4450,7 @@ body,
 }
 
 .torch-red .testimonials-area .item .provider span {
-	color: #ee2852;
+	color: #252062;
 }
 
 .testimonials-area .row > .info {
@@ -4503,7 +4503,7 @@ body,
 }
 
 .torch-red .expertise-area .info h4 {
-	color: #ee2852;
+	color: #252062;
 	background: linear-gradient(90deg, rgba(238,40,82,1) 0%, rgba(166,23,153,1) 100%);
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -4567,7 +4567,7 @@ body,
 }
 
 .torch-red .skill-items .progress-box .progress .progress-bar {
-	background: #ee2852;
+	background: #252062;
 }
 
 .skill-items .progress-box .progress .progress-bar span {
@@ -4597,7 +4597,7 @@ body,
 	content: "\f106";
 	font-family: "Font Awesome 5 Pro";
 	font-weight: 600;
-	color: #ee2852;
+	color: #252062;
 	font-size: 20px;
 }
 
@@ -5042,7 +5042,7 @@ body,
 }
 
 .torch-red .gallery-area .pf-item .item .content .button a {
-	background: #ee2852;
+	background: #252062;
 	color: #ffffff;
 }
 
@@ -5150,7 +5150,7 @@ body,
 }
 
 .torch-red .projects-area .single-item a {
-	background: #ee2852;
+	background: #252062;
 }
 
 .projects-area .single-item a i {
@@ -5634,7 +5634,7 @@ body,
 .torch-red .blog-area .blog-items h4 a:hover,
 .torch-red .blog-area .blog-items h5 a:hover,
 .torch-red .blog-area .blog-items .meta a:hover {
-	color: #ee2852;
+	color: #252062;
 }
 
 .blog-area .meta {
@@ -5694,7 +5694,7 @@ body,
 }
 
 .torch-red .blog-area .meta ul li:first-child a {
-	color: #ee2852;
+	color: #252062;
 }
 
 .blog-area .meta ul li a:hover {
@@ -5702,7 +5702,7 @@ body,
 }
 
 .torch-red .blog-area .meta ul li a:hover {
-	color: #ee2852;
+	color: #252062;
 }
 
 .blog-area .info p:last-child {
@@ -7194,7 +7194,7 @@ footer .f-items .f-item form button {
 }
 
 .torch-red footer .f-items .f-item form button {
-	color: #ee2852;
+	color: #252062;
 }
 
 footer .f-items .f-item form button::after {
@@ -7266,7 +7266,7 @@ footer .f-items .f-item .address li i {
 }
 
 .torch-red footer .f-items .f-item .address li i {
-	color: #ee2852;
+	color: #252062;
 }
 
 footer .f-items .f-item .address li:last-child {
@@ -7375,7 +7375,7 @@ footer .footer-bottom-box::after {
 }
 
 .torch-red .earna-preloader .animation-preloader .spinner {
-	border-top-color: #ee2852;
+	border-top-color: #252062;
 }
 
 .earna-preloader .animation-preloader .txt-loading {
@@ -7632,11 +7632,11 @@ nav.navbar.bootsnav {
 }
 
 .btn.btn-theme.effect::before {
-	background: #ee2852;
+	background: #252062;
 }
 
 .btn.btn-theme.effect:hover {
-	border: 2px solid #ee2852;
+	border: 2px solid #252062;
 }
 
 .banner-style-six .content h2 {
@@ -7676,7 +7676,7 @@ nav.navbar.bootsnav {
 	bottom: 12px;
 	content: "";
 	height: 7px;
-	background: #ee2852;
+	background: #252062;
 	z-index: -1;
 }
 
@@ -7687,7 +7687,7 @@ nav.navbar.bootsnav {
 	bottom: 5px;
 	content: "";
 	height: 3px;
-	background: #ee2852;
+	background: #252062;
 	z-index: -1;
 	transform: rotate(-1deg);
 }
@@ -7714,9 +7714,9 @@ nav.navbar.bootsnav {
 }
 
 .about-service-list {
-	background-color: #ee2852;
+	background-color: #252062;
 	padding: 50px;
-	background: linear-gradient(30deg, #1273eb 5%, #ee2852 90%);
+	background: linear-gradient(30deg, #1273eb 5%, #252062 90%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -8009,7 +8009,7 @@ nav.navbar.bootsnav {
 }
 
 .compnay-owner-carousel-carousel .item .company-owner-info .provider {
-	background: linear-gradient(30deg, #1273eb 5%, #ee2852 90%);
+	background: linear-gradient(30deg, #1273eb 5%, #252062 90%);
 	padding: 15px 30px;
 }
 
