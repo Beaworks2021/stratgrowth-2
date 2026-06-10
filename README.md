@@ -1,1 +1,0 @@
-# stratgrowth-2
