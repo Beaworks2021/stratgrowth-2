@@ -7562,6 +7562,16 @@ footer .footer-bottom-box::after {
 	transition: 0.7s 0.3s allcubic-bezier(0.1, 0.1, 0.1, 1);
 }
 
+/* Disable the shared preloader overlay site-wide. */
+#preloader,
+#earna-preloader,
+.earna-preloader {
+	display: none !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
+}
+
 @-webkit-keyframes spinner {
 	to {
 		-webkit-transform: rotateZ(360deg);
