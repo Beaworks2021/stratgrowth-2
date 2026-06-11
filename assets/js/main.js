@@ -414,6 +414,36 @@
             });
         });
 
+        /* ==================================================
+            # Our Services Mobile Dropdown
+        ================================================== */
+        $(document).on('click', 'nav.navbar.bootsnav li.dropdown > a[href$="services.html"]', function(e) {
+            var isMobileNav = $('.navbar-toggle').is(':visible') || window.innerWidth < 1024;
+            var $trigger = $(this);
+            var $parent = $trigger.parent('li.dropdown');
+            var $menu = $parent.children('.dropdown-menu');
+
+            if (!isMobileNav || !$menu.length) {
+                return;
+            }
+
+            if (!$parent.hasClass('on')) {
+                e.preventDefault();
+                $('nav.navbar.bootsnav li.dropdown').not($parent).removeClass('on').children('.dropdown-menu').stop(true, true).fadeOut();
+                $parent.addClass('on');
+                $menu.stop(true, true).fadeIn();
+                return;
+            }
+
+            window.location.href = $trigger.attr('href');
+        });
+
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('nav.navbar.bootsnav li.dropdown').length) {
+                $('nav.navbar.bootsnav li.dropdown').removeClass('on').children('.dropdown-menu').stop(true, true).fadeOut();
+            }
+        });
+
     }); // end document ready function
 
 

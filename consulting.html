@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stratgrowth consulting services">
+    <title>Stratgrowth - Consulting</title>
+
+    <link rel="shortcut icon" href="assets/img/favi.png" type="image/x-icon">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+
+    <style>
+        .service-detail-hero {
+            padding: 185px 0 95px;
+            background: linear-gradient(180deg, #f7f8ff 0%, #eef3ff 100%);
+            overflow: hidden;
+        }
+
+        .service-eyebrow {
+            display: inline-block;
+            margin-bottom: 16px;
+            color: #252062;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .service-detail-hero h1 {
+            margin-bottom: 18px;
+            color: #111827;
+            font-size: 54px;
+            font-weight: 700;
+            line-height: 1.08;
+        }
+
+        .service-detail-hero .lead {
+            margin-bottom: 22px;
+            color: #252062;
+            font-size: 27px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .service-detail-hero p {
+            color: #556070;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .service-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .service-primary-btn,
+        .service-secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 210px;
+            padding: 16px 30px;
+            border-radius: 999px;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+            transition: all 0.3s ease;
+        }
+
+        .service-primary-btn {
+            background: #252062;
+            border: 2px solid #252062;
+            color: #ffffff;
+            box-shadow: 0 16px 30px rgba(37, 32, 98, 0.22);
+        }
+
+        .service-primary-btn:hover,
+        .service-primary-btn:focus {
+            background: #1b1747;
+            border-color: #1b1747;
+            color: #ffffff;
+        }
+
+        .service-secondary-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(37, 32, 98, 0.12);
+            color: #252062;
+        }
+
+        .service-secondary-btn:hover,
+        .service-secondary-btn:focus {
+            border-color: #252062;
+            color: #252062;
+        }
+
+        .service-highlight-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 36px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .service-highlight-list li {
+            position: relative;
+            padding: 18px 18px 18px 54px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(37, 32, 98, 0.08);
+            border-radius: 16px;
+            color: #1f2937;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.55;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .service-highlight-list li i {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            color: #252062;
+            font-size: 20px;
+        }
+
+        .service-hero-visual {
+            position: relative;
+            min-height: 610px;
+        }
+
+        .service-hero-glow {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, rgba(37, 32, 98, 0.18), rgba(37, 32, 98, 0));
+        }
+
+        .service-image-card,
+        .service-floating-card,
+        .service-stat-card,
+        .service-overview-card,
+        .service-focus-panel,
+        .service-capability-card,
+        .service-cta-panel {
+            background: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+        }
+
+        .service-image-card {
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .service-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-image-main {
+            right: 0;
+            top: 20px;
+            width: 76%;
+            height: 520px;
+        }
+
+        .service-image-secondary {
+            left: 10px;
+            bottom: 36px;
+            width: 42%;
+            height: 245px;
+            border: 10px solid #f7f8ff;
+        }
+
+        .service-floating-card {
+            position: absolute;
+            left: 0;
+            top: 85px;
+            max-width: 255px;
+            padding: 24px;
+            background: linear-gradient(135deg, #252062 0%, #2b8cff 100%);
+            color: #ffffff;
+            box-shadow: 0 24px 60px rgba(37, 32, 98, 0.26);
+        }
+
+        .service-floating-card span {
+            display: block;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .service-floating-card h4 {
+            margin-bottom: 12px;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .service-floating-card p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .service-stats-row {
+            margin-top: 35px;
+        }
+
+        .service-stat-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            height: 100%;
+            padding: 24px 24px;
+        }
+
+        .service-stat-card .icon {
+            flex: 0 0 58px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: rgba(37, 32, 98, 0.08);
+            color: #252062;
+            font-size: 22px;
+            line-height: 58px;
+            text-align: center;
+        }
+
+        .service-stat-card h3 {
+            margin: 0 0 4px;
+            color: #111827;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .service-stat-card p {
+            margin: 0;
+            color: #5d6678;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .service-overview-section {
+            padding: 0 0 110px;
+        }
+
+        .service-overview-card {
+            padding: 48px;
+            height: 100%;
+        }
+
+        .service-overview-card p {
+            margin-bottom: 20px;
+            color: #556070;
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        .service-overview-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-focus-panel {
+            height: 100%;
+            padding: 36px 34px;
+            background: linear-gradient(180deg, #0f172a 0%, #252062 100%);
+            color: #ffffff;
+        }
+
+        .service-focus-panel h3 {
+            margin-bottom: 16px;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .service-focus-panel p {
+            color: rgba(255, 255, 255, 0.84);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .service-focus-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .service-focus-panel li {
+            position: relative;
+            margin-bottom: 16px;
+            padding-left: 30px;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .service-focus-panel li::before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: #67e8f9;
+        }
+
+        .service-capabilities-section {
+            padding: 110px 0;
+        }
+
+        .service-section-heading {
+            max-width: 760px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .service-section-heading h2 {
+            margin-bottom: 16px;
+            font-size: 42px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .service-section-heading p {
+            margin: 0;
+            color: #5d6678;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .service-capability-wrap {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .service-capability-card {
+            position: relative;
+            width: 100%;
+            padding: 34px 30px;
+            border-top: 4px solid #252062;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-capability-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 65px rgba(15, 23, 42, 0.14);
+        }
+
+        .service-capability-card .capability-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(37, 32, 98, 0.1), rgba(43, 140, 255, 0.14));
+            color: #252062;
+            font-size: 24px;
+        }
+
+        .service-capability-card h3 {
+            margin-bottom: 20px;
+            color: #111827;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .service-capability-card .section-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #252062;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .service-capability-card p {
+            margin-bottom: 18px;
+            color: #556070;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .service-capability-card ul {
+            margin: 0 0 18px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .service-capability-card li {
+            position: relative;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            color: #374151;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .service-capability-card li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #252062;
+        }
+
+        .service-cta-band {
+            padding: 0 0 110px;
+            background: linear-gradient(135deg, #111827 0%, #252062 58%, #2b8cff 100%);
+        }
+
+        .service-cta-panel {
+            padding: 46px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .service-cta-panel h2 {
+            margin-bottom: 18px;
+            color: #ffffff;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .service-cta-panel p {
+            max-width: 860px;
+            margin: 0 auto 26px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 1199px) {
+            .service-hero-visual {
+                min-height: 560px;
+            }
+
+            .service-image-main {
+                width: 74%;
+                height: 470px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .service-detail-hero {
+                padding: 155px 0 80px;
+            }
+
+            .service-detail-hero h1,
+            .service-section-heading h2,
+            .service-cta-panel h2,
+            .service-capability-card h3 {
+                font-size: 34px;
+            }
+
+            .service-detail-hero .lead {
+                font-size: 23px;
+            }
+
+            .service-highlight-list,
+            .service-overview-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .service-hero-copy {
+                margin-bottom: 40px;
+            }
+
+            .service-hero-visual {
+                min-height: 520px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .service-detail-hero h1,
+            .service-section-heading h2,
+            .service-cta-panel h2,
+            .service-capability-card h3 {
+                font-size: 28px;
+            }
+
+            .service-detail-hero .lead {
+                font-size: 21px;
+            }
+
+            .service-detail-hero p,
+            .service-overview-card p,
+            .service-capability-card p,
+            .service-focus-panel p,
+            .service-section-heading p,
+            .service-cta-panel p {
+                font-size: 16px;
+            }
+
+            .service-overview-card,
+            .service-focus-panel,
+            .service-capability-card,
+            .service-cta-panel,
+            .service-floating-card {
+                padding: 28px 24px;
+            }
+
+            .service-hero-visual {
+                min-height: 420px;
+            }
+
+            .service-image-main {
+                top: 0;
+                width: 82%;
+                height: 320px;
+            }
+
+            .service-image-secondary {
+                width: 48%;
+                height: 155px;
+                left: 0;
+                bottom: 10px;
+                border-width: 6px;
+            }
+
+            .service-floating-card {
+                top: 30px;
+                max-width: 200px;
+            }
+
+            .service-stat-card {
+                padding: 20px;
+            }
+
+            .service-hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="preloader">
+        <div id="earna-preloader" class="earna-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="S" class="letters-loading">S</span>
+                    <span data-text-preloader="G" class="letters-loading">G</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header id="home">
+        <nav class="navbar navbar-default attr-bg navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/Stratgrowth-Logo-wt.png" class="logo logo-display" alt="Logo">
+                        <img src="assets/img/Stratgrowth-Logo.png" class="logo logo-scrolled" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Industries</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-12">
+                                            <h6 class="title">Industries</h6>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="pages/industries/agribusiness.html">Agribusiness</a></li>
+                                                    <li><a href="pages/industries/automotive.html">Automotive</a></li>
+                                                    <li><a href="pages/industries/construction-infrastructure.html">Construction &amp; Infrastructure</a></li>
+                                                    <li><a href="pages/industries/consumer-products.html">Consumer Products</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="pages/industries/financial-services.html">Financial Services</a></li>
+                                                    <li><a href="pages/industries/healthcare-life-sciences.html">Healthcare &amp; Life Sciences</a></li>
+                                                    <li><a href="pages/industries/machinery-equipment.html">Industrial Machinery &amp; Equipment</a></li>
+                                                    <li><a href="pages/industries/media-entertainment.html">Media &amp; Entertainment</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="pages/industries/oil-gas.html">Oil &amp; Gas</a></li>
+                                                    <li><a href="pages/industries/private-equity.html">Private Equity</a></li>
+                                                    <li><a href="pages/industries/retail.html">Retail</a></li>
+                                                    <li><a href="pages/industries/social-impact.html">Social Impact</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="pages/industries/technology.html">Technology</a></li>
+                                                    <li><a href="pages/industries/telecommunications.html">Telecommunications</a></li>
+                                                    <li><a href="pages/industries/transportation.html">Transportation</a></li>
+                                                    <li><a href="pages/industries/travel-leisure.html">Travel &amp; Leisure</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="services.html" class="active dropdown-toggle" data-toggle="dropdown">Our Services</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-12">
+                                            <h6 class="title">Our Services</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="services.html">Services</a></li>
+                                                    <li><a href="consulting.html" class="active">Consulting</a></li>
+                                                    <li><a href="training.html">Training</a></li>
+                                                    <li><a href="transformation.html">Transformation</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Digital</a></li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Insights</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-3">
+                                            <h6 class="title">Insights</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Industry Insights</a></li>
+                                                    <li><a href="#">Services Insights</a></li>
+                                                    <li><a href="#">Stratgrowth Books</a></li>
+                                                    <li><a href="#">Webinars</a></li>
+                                                    <li><a href="#">Stratgrowth Futures</a></li>
+                                                    <li><a href="#">View all Insights</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <h6 class="title">Featured topics</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Tariff Response</a></li>
+                                                    <li><a href="#">Artificial Intelligence</a></li>
+                                                    <li><a href="#">Thriving in Uncertainty</a></li>
+                                                    <li><a href="#">Executive Conversations</a></li>
+                                                    <li><a href="#">Macro Trends</a></li>
+                                                    <li><a href="#">View all featured topics</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">B2B Growth Agenda</a></li>
+                                                    <li><a href="#">Private Equity Report</a></li>
+                                                    <li><a href="#">M&amp;A Report</a></li>
+                                                    <li><a href="#">Healthcare Private Equity Report</a></li>
+                                                    <li><a href="#">Technology Report</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">CEO Insights</a></li>
+                                                    <li><a href="#">CFO Insights</a></li>
+                                                    <li><a href="#">COO Insights</a></li>
+                                                    <li><a href="#">CIO Insights</a></li>
+                                                    <li><a href="#">CMO Insights</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-6">
+                                            <h6 class="title">About</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="about-us.html#mission">Mission &amp; Vision</a></li>
+                                                    <li><a href="about-us.html#values">Core Values</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-6">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Client Results</a></li>
+                                                    <li><a href="#">Awards &amp; Recognition</a></li>
+                                                    <li><a href="#">Global Affiliations</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="career.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="breadcrumb-area text-center shadow dark text-light bg-cover" style="background-image: url(assets/img/2440x1578-d.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1>Consulting</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li class="active">Consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6">
+                    <div class="service-hero-copy">
+                        <span class="service-eyebrow">Consulting</span>
+                        <h1>Consulting Services That Turn Strategy Into Measurable Results</h1>
+                        <p class="lead">Helping organisations solve complex business challenges, improve performance, and create sustainable growth opportunities.</p>
+                        <p>Our consulting practice helps leaders respond to market pressure, operational complexity, and performance gaps with practical solutions designed for sustainable growth.</p>
+                        <div class="service-hero-actions">
+                            <a class="service-primary-btn" href="contact.html">Book Consultation</a>
+                            <a class="service-secondary-btn" href="#capabilities">Explore Capabilities</a>
+                        </div>
+                        <ul class="service-highlight-list">
+                            <li><i class="fas fa-chart-line"></i>Growth-focused strategic advisory</li>
+                            <li><i class="fas fa-cogs"></i>Operational efficiency and redesign</li>
+                            <li><i class="fas fa-sitemap"></i>Structure, governance, and alignment</li>
+                            <li><i class="fas fa-tachometer-alt"></i>Performance systems and accountability</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-hero-visual">
+                        <div class="service-hero-glow"></div>
+                        <div class="service-image-card service-image-main">
+                            <img src="assets/img/2440x1578-b.png" alt="Consulting strategy visual">
+                        </div>
+                        <div class="service-image-card service-image-secondary">
+                            <img src="assets/img/800x900.png" alt="Consulting collaboration visual">
+                        </div>
+                        <div class="service-floating-card">
+                            <span>Consulting Practice</span>
+                            <h4>Tailored solutions that strengthen business foundations</h4>
+                            <p>We work alongside leaders to diagnose issues, unlock opportunity, and build capabilities that create lasting value.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row service-stats-row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-stat-card">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="info">
+                            <h3>4</h3>
+                            <p>core consulting capabilities designed to improve growth, efficiency, and accountability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-stat-card">
+                        <div class="icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="info">
+                            <h3>Tailored</h3>
+                            <p>solutions aligned to each organisation's operating environment and ambitions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-stat-card">
+                        <div class="icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="info">
+                            <h3>Measurable</h3>
+                            <p>outcomes that move clients beyond short-term fixes to lasting performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-overview-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-30">
+                    <div class="service-overview-card">
+                        <span class="service-eyebrow">Service Overview</span>
+                        <p>In today's increasingly competitive and complex business environment, organisations must continuously adapt, improve performance, and position themselves for sustainable growth. However, many businesses face challenges such as operational inefficiencies, unclear growth strategies, underperforming teams, market pressures, and changing customer expectations.</p>
+                        <p>At Stratgrowth Management Partners, our Consulting practice is designed to help organisations navigate these challenges with confidence. We work alongside business leaders to identify opportunities, solve critical problems, improve performance, and build stronger foundations for long-term success.</p>
+                        <p>Our approach combines strategic insight, industry expertise, and practical execution. Rather than delivering generic recommendations, we develop tailored solutions that align with each organisation's unique goals, operating environment, and growth ambitions.</p>
+                        <p>Whether an organisation is seeking to accelerate growth, improve efficiency, restructure operations, or strengthen performance management, our consulting services provide the clarity, direction, and support needed to achieve measurable results.</p>
+                        <p>We help clients move beyond short-term fixes by building sustainable systems, stronger capabilities, and strategic frameworks that drive lasting value.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-30">
+                    <aside class="service-focus-panel">
+                        <span class="service-eyebrow" style="color: rgba(255,255,255,0.72);">Our Approach</span>
+                        <h3>How Our Consulting Engagements Create Value</h3>
+                        <p>We focus on the decisions, structures, and execution priorities that help organisations perform better in the present while preparing for future growth.</p>
+                        <ul>
+                            <li>Assess current performance, market position, and operational constraints</li>
+                            <li>Identify practical growth and improvement opportunities</li>
+                            <li>Build tailored frameworks that fit the organisation's context</li>
+                            <li>Support execution with clarity, accountability, and measurable outcomes</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="service-capabilities-section bg-gray">
+        <div class="container">
+            <div class="service-section-heading">
+                <span class="service-eyebrow">Capabilities</span>
+                <h2>Consulting Capabilities</h2>
+                <p>Explore the focused solutions we use to help organisations solve critical challenges, improve performance, and create lasting value.</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 service-capability-wrap">
+                    <article class="service-capability-card">
+                        <span class="capability-icon"><i class="fas fa-rocket"></i></span>
+                        <h3>Business Development</h3>
+                        <span class="section-label">What It Is</span>
+                        <p>Business development is about creating sustainable pathways for growth by identifying opportunities, strengthening market positioning, expanding customer reach, and increasing revenue potential.</p>
+                        <span class="section-label">Key Challenges It Solves</span>
+                        <ul>
+                                    <li>Stagnant revenue growth</li>
+                                    <li>Limited market visibility</li>
+                                    <li>Customer acquisition challenges</li>
+                                    <li>Weak competitive positioning</li>
+                                    <li>Market expansion uncertainty</li>
+                                    <li>Ineffective growth strategies</li>
+                        </ul>
+                        <span class="section-label">How Stratgrowth Helps</span>
+                        <p>We work with organisations to assess their market position, identify growth opportunities, strengthen value propositions, and develop actionable business development strategies. Our consultants help clients evaluate new markets, optimise sales approaches, improve customer acquisition efforts, and build growth-focused business models.</p>
+                        <span class="section-label">Outcomes &amp; Benefits</span>
+                        <ul>
+                                    <li>Increased revenue opportunities</li>
+                                    <li>Improved market competitiveness</li>
+                                    <li>Stronger customer acquisition strategies</li>
+                                    <li>Enhanced business growth planning</li>
+                                    <li>Sustainable expansion opportunities</li>
+                                    <li>Long-term value creation</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="col-lg-6 service-capability-wrap">
+                    <article class="service-capability-card">
+                        <span class="capability-icon"><i class="fas fa-cogs"></i></span>
+                        <h3>Operational Improvement</h3>
+                        <span class="section-label">What It Is</span>
+                        <p>Operational improvement focuses on enhancing efficiency, productivity, and organisational effectiveness by optimising processes, systems, and workflows.</p>
+                        <span class="section-label">Key Challenges It Solves</span>
+                        <ul>
+                                    <li>Inefficient business processes</li>
+                                    <li>High operating costs</li>
+                                    <li>Productivity challenges</li>
+                                    <li>Process bottlenecks</li>
+                                    <li>Poor resource utilisation</li>
+                                    <li>Service delivery inconsistencies</li>
+                        </ul>
+                        <span class="section-label">How Stratgrowth Helps</span>
+                        <p>We assess existing operations, identify inefficiencies, and develop practical solutions that improve performance. Through process reviews, workflow optimisation, performance analysis, and operational redesign, we help organisations maximise value while reducing waste and complexity.</p>
+                        <span class="section-label">Outcomes &amp; Benefits</span>
+                        <ul>
+                                    <li>Increased operational efficiency</li>
+                                    <li>Improved productivity</li>
+                                    <li>Reduced costs</li>
+                                    <li>Faster decision-making</li>
+                                    <li>Better service delivery</li>
+                                    <li>Stronger organisational performance</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="col-lg-6 service-capability-wrap">
+                    <article class="service-capability-card">
+                        <span class="capability-icon"><i class="fas fa-sitemap"></i></span>
+                        <h3>Organisational Restructuring</h3>
+                        <span class="section-label">What It Is</span>
+                        <p>Organisational restructuring involves aligning people, processes, governance structures, and reporting systems to support strategic objectives and future growth.</p>
+                        <span class="section-label">Key Challenges It Solves</span>
+                        <ul>
+                                    <li>Ineffective organisational structures</li>
+                                    <li>Role ambiguity</li>
+                                    <li>Communication breakdowns</li>
+                                    <li>Poor accountability</li>
+                                    <li>Rapid growth challenges</li>
+                                    <li>Change management difficulties</li>
+                        </ul>
+                        <span class="section-label">How Stratgrowth Helps</span>
+                        <p>We help organisations evaluate current structures, identify areas for improvement, and design operating models that support efficiency, accountability, and strategic alignment. Our restructuring solutions focus on creating organisations that are agile, scalable, and capable of sustaining growth.</p>
+                        <span class="section-label">Outcomes &amp; Benefits</span>
+                        <ul>
+                                    <li>Clearer organisational structure</li>
+                                    <li>Improved accountability</li>
+                                    <li>Enhanced collaboration</li>
+                                    <li>Stronger governance</li>
+                                    <li>Greater agility and adaptability</li>
+                                    <li>Better alignment with strategic goals</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="col-lg-6 service-capability-wrap">
+                    <article class="service-capability-card">
+                        <span class="capability-icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <h3>Performance Management</h3>
+                        <span class="section-label">What It Is</span>
+                        <p>Performance management is the process of establishing clear goals, measuring outcomes, monitoring progress, and creating accountability systems that drive organisational success.</p>
+                        <span class="section-label">Key Challenges It Solves</span>
+                        <ul>
+                                    <li>Unclear performance expectations</li>
+                                    <li>Weak accountability</li>
+                                    <li>Lack of performance measurement</li>
+                                    <li>Inconsistent employee productivity</li>
+                                    <li>Poor alignment between goals and results</li>
+                        </ul>
+                        <span class="section-label">How Stratgrowth Helps</span>
+                        <p>We design performance management frameworks that align individual, team, and organisational objectives. Our approach includes KPI development, performance measurement systems, accountability structures, and continuous performance improvement processes.</p>
+                        <span class="section-label">Outcomes &amp; Benefits</span>
+                        <ul>
+                                    <li>Improved organisational performance</li>
+                                    <li>Stronger accountability culture</li>
+                                    <li>Better decision-making through data</li>
+                                    <li>Increased employee productivity</li>
+                                    <li>Clear performance visibility</li>
+                                    <li>Enhanced strategic execution</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-cta-band">
+        <div class="container">
+            <div class="service-cta-panel">
+                <span class="service-eyebrow" style="color: rgba(255,255,255,0.72);">Next Step</span>
+                <h2>Ready to Strengthen Performance and Unlock Growth?</h2>
+                <p>Book a strategic consultation to explore how our consulting services can help your organisation improve performance, sharpen priorities, and create sustainable value.</p>
+                <a class="service-primary-btn" href="contact.html">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 item">
+                        <div class="f-item about">
+                            <img src="assets/img/Stratgrowth-Logo-wt.png" alt="Logo">
+                            <p>
+                                Building Stronger Organisations Through Strategy, Leadership, and Sustainable Growth
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Quick LInk</h4>
+                            <ul>
+                                <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                                <li><a href="about-us.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                                <li><a href="services.html"><i class="fas fa-angle-right"></i> Services</a></li>
+                                <li><a href="career.html"><i class="fas fa-angle-right"></i> Careers</a></li>
+                                <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Community</h4>
+                            <ul>
+                                <li><a href="pages/industries/agribusiness.html"><i class="fas fa-angle-right"></i> Agribusiness</a></li>
+                                <li><a href="pages/industries/financial-services.html"><i class="fas fa-angle-right"></i> Financial Services</a></li>
+                                <li><a href="pages/industries/healthcare-life-sciences.html"><i class="fas fa-angle-right"></i> Healthcare &amp; Life Sciences</a></li>
+                                <li><a href="pages/industries/retail.html"><i class="fas fa-angle-right"></i> Retail</a></li>
+                                <li><a href="pages/industries/technology.html"><i class="fas fa-angle-right"></i> Technology</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 item">
+                        <div class="f-item contact-widget">
+                            <h4 class="widget-title">Contact Info</h4>
+                            <div class="address">
+                                <ul>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                        <div class="content">
+                                            <strong>Address:</strong>
+                                            Utopia Serviced Offices, 14 Senchi Street, Airport Residential, GA-083-6113
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="content">
+                                            <strong>Email:</strong>
+                                            <a href="mailto:info@stratgrowthpartnes.com">info@stratgrowthpartnes.com</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="content">
+                                            <strong>Phone:</strong>
+                                            <a href="tel:2151234567">+233 20 265 8384</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-box">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>&copy; Copyright 2026. All Rights Reserved by <a href="#">Beaworks</a></p>
+                        </div>
+                        <div class="col-lg-6 text-right link">
+                            <ul>
+                                <li>
+                                    <a href="#">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/circle-progress.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

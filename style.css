@@ -830,6 +830,16 @@ a:hover, a:active {
 	color: #ffffff;
 }
 
+nav.navbar.bootsnav ul.nav li.dropdown:not(.megamenu-fw) ul.dropdown-menu > li > a {
+	transition: color 0.25s ease;
+}
+
+nav.navbar.bootsnav ul.nav li.dropdown:not(.megamenu-fw) ul.dropdown-menu > li > a:hover,
+nav.navbar.bootsnav ul.nav li.dropdown:not(.megamenu-fw) ul.dropdown-menu > li > a:focus {
+	background: transparent !important;
+	color: #1273eb !important;
+}
+
 .btn-theme-border {
 	border: 2px solid #1273eb;
 	overflow: hidden;
@@ -8858,6 +8868,33 @@ nav.navbar.bootsnav {
 		left: 0;
 		margin: 0;
 		margin-bottom: 25px;
+	}
+
+	.banner-area.text-big h2.banner-title--long {
+		font-size: clamp(34px, 9vw, 48px);
+		line-height: 1;
+		margin-bottom: 12px;
+	}
+
+	.banner-area.text-big h2.banner-title--long span {
+		font-size: clamp(22px, 6.5vw, 32px);
+		line-height: 1.05;
+	}
+
+	.banner-area.text-big .carousel-item .content p {
+		max-width: 100%;
+		padding: 0 12px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.banner-area.text-big h2.banner-title--long {
+		font-size: 32px;
+		line-height: 1.02;
+	}
+
+	.banner-area.text-big h2.banner-title--long span {
+		font-size: 20px;
 	}
 }
 

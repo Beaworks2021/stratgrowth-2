@@ -27,6 +27,533 @@
     <link href="assets/css/bootsnav.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <style>
+        .about-story-area {
+            background: linear-gradient(180deg, #f7f8fb 0%, #eef2ff 100%);
+            overflow: hidden;
+        }
+
+        .about-hero-wrap {
+            align-items: center;
+        }
+
+        .about-hero-copy {
+            padding-right: 25px;
+        }
+
+        .about-eyebrow {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: #252062;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .about-page-title {
+            margin-bottom: 20px;
+            color: #111827;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.12;
+        }
+
+        .about-copy-card .lead,
+        .about-hero-copy .lead {
+            margin-bottom: 24px;
+            color: #252062;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .about-copy-card p,
+        .about-hero-copy p {
+            margin-bottom: 20px;
+            color: #4f5a6a;
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .about-hero-points {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 34px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .about-hero-points li {
+            position: relative;
+            padding: 18px 18px 18px 52px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(37, 32, 98, 0.08);
+            border-radius: 16px;
+            color: #1f2937;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            backdrop-filter: blur(6px);
+        }
+
+        .about-hero-points li i {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            color: #252062;
+            font-size: 20px;
+        }
+
+        .about-hero-visual {
+            position: relative;
+            min-height: 620px;
+        }
+
+        .about-hero-shape {
+            position: absolute;
+            right: 40px;
+            top: 0;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, rgba(37, 32, 98, 0.18), rgba(37, 32, 98, 0));
+        }
+
+        .about-image-card,
+        .about-float-card,
+        .about-stat-chip,
+        .about-statement-card,
+        .about-value-card,
+        .about-quote-card {
+            background: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+        }
+
+        .about-image-card {
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .about-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-image-main {
+            right: 0;
+            top: 20px;
+            width: 76%;
+            height: 520px;
+        }
+
+        .about-image-secondary {
+            left: 10px;
+            bottom: 40px;
+            width: 44%;
+            height: 250px;
+            border: 10px solid #f7f8fb;
+        }
+
+        .about-float-card {
+            position: absolute;
+            left: 0;
+            top: 80px;
+            max-width: 250px;
+            padding: 24px;
+            background: linear-gradient(135deg, #252062 0%, #2b8cff 100%);
+            color: #ffffff;
+            box-shadow: 0 24px 60px rgba(37, 32, 98, 0.28);
+        }
+
+        .about-float-card span {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .about-float-card h4 {
+            margin-bottom: 12px;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .about-float-card p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .about-stats-row {
+            margin-top: 35px;
+        }
+
+        .about-stat-chip {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            height: 100%;
+            padding: 24px 24px;
+        }
+
+        .about-stat-chip .icon {
+            flex: 0 0 56px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(37, 32, 98, 0.08);
+            color: #252062;
+            font-size: 22px;
+            line-height: 56px;
+            text-align: center;
+        }
+
+        .about-stat-chip h3 {
+            margin: 0 0 4px;
+            color: #111827;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .about-stat-chip p {
+            margin: 0;
+            color: #5d6678;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .about-copy-card {
+            padding: 50px;
+        }
+
+        .about-copy-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.9fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        .about-side-panel {
+            padding: 34px;
+            border-radius: 22px;
+            background: linear-gradient(180deg, #0f172a 0%, #252062 100%);
+            color: #ffffff;
+        }
+
+        .about-side-panel h3 {
+            margin-bottom: 18px;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .about-side-panel p {
+            margin-bottom: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about-side-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .about-side-panel li {
+            position: relative;
+            margin-bottom: 16px;
+            padding-left: 30px;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .about-side-panel li::before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: #67e8f9;
+        }
+
+        .about-statement-area {
+            position: relative;
+            background: #ffffff;
+        }
+
+        .about-statement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .about-statement-card {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            padding: 38px;
+        }
+
+        .about-statement-card::after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            top: -40px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(37, 32, 98, 0.05);
+        }
+
+        .about-statement-card .statement-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 68px;
+            height: 68px;
+            margin-bottom: 24px;
+            border-radius: 18px;
+            background: rgba(37, 32, 98, 0.08);
+            color: #252062;
+            font-size: 28px;
+        }
+
+        .about-statement-card h3 {
+            margin-bottom: 20px;
+            color: #111827;
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 1.15;
+            text-transform: uppercase;
+        }
+
+        .about-statement-card p {
+            margin: 0;
+            color: #4f5a6a;
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .about-values-heading {
+            max-width: 760px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .about-values-heading h2 {
+            margin-bottom: 15px;
+            font-size: 42px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .about-values-heading p {
+            margin: 0;
+            color: #5d6678;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .about-values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        .about-value-card {
+            position: relative;
+            height: 100%;
+            padding: 34px 30px;
+            border-top: 4px solid #252062;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 65px rgba(15, 23, 42, 0.14);
+        }
+
+        .about-value-card .value-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 62px;
+            height: 62px;
+            margin-bottom: 18px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(37, 32, 98, 0.1), rgba(43, 140, 255, 0.12));
+            color: #252062;
+            font-size: 24px;
+        }
+
+        .about-value-card h4 {
+            margin-bottom: 16px;
+            color: #111827;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .about-value-card p {
+            margin: 0;
+            color: #556070;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .about-closing-band {
+            background: linear-gradient(135deg, #111827 0%, #252062 55%, #2b8cff 100%);
+        }
+
+        .about-closing-band .inner {
+            padding: 70px 0;
+        }
+
+        .about-quote-card {
+            padding: 42px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .about-quote-card h2 {
+            margin-bottom: 18px;
+            color: #ffffff;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .about-quote-card p {
+            max-width: 860px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 1199px) {
+            .about-hero-visual {
+                min-height: 560px;
+            }
+
+            .about-image-main {
+                width: 74%;
+                height: 470px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .about-page-title,
+            .about-values-heading h2,
+            .about-quote-card h2,
+            .about-statement-card h3 {
+                font-size: 34px;
+            }
+
+            .about-copy-card .lead,
+            .about-hero-copy .lead {
+                font-size: 24px;
+            }
+
+            .about-hero-copy {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .about-hero-visual {
+                min-height: 540px;
+            }
+
+            .about-statement-grid,
+            .about-values-grid,
+            .about-copy-layout,
+            .about-hero-points {
+                grid-template-columns: 1fr;
+            }
+
+            .about-copy-card,
+            .about-statement-card,
+            .about-value-card,
+            .about-side-panel {
+                padding: 34px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .about-page-title,
+            .about-values-heading h2,
+            .about-quote-card h2,
+            .about-statement-card h3 {
+                font-size: 28px;
+            }
+
+            .about-copy-card .lead,
+            .about-hero-copy .lead {
+                font-size: 22px;
+            }
+
+            .about-copy-card,
+            .about-statement-card,
+            .about-value-card,
+            .about-side-panel,
+            .about-quote-card,
+            .about-float-card {
+                padding: 28px 24px;
+            }
+
+            .about-copy-card p,
+            .about-statement-card p,
+            .about-values-heading p,
+            .about-value-card p,
+            .about-quote-card p,
+            .about-side-panel p,
+            .about-hero-copy p {
+                font-size: 16px;
+            }
+
+            .about-hero-visual {
+                min-height: 430px;
+            }
+
+            .about-image-main {
+                top: 0;
+                width: 82%;
+                height: 320px;
+            }
+
+            .about-image-secondary {
+                width: 48%;
+                height: 155px;
+                left: 0;
+                bottom: 10px;
+                border-width: 6px;
+            }
+
+            .about-float-card {
+                top: 30px;
+                max-width: 190px;
+            }
+
+            .about-stat-chip {
+                padding: 20px;
+            }
+        }
+    </style>
     <!-- ========== End Stylesheet ========== -->
 
 </head>
@@ -214,12 +741,24 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="services.html"  >Our Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="services.html#consulting">Consulting</a></li>
-                                <li><a href="services.html#training">Training</a></li>
-                                <li><a href="services.html#transformation">Transformation</a></li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="services.html" class="dropdown-toggle" data-toggle="dropdown">Our Services</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-12">
+                                            <h6 class="title">Our Services</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="services.html">Services</a></li>
+                                                    <li><a href="consulting.html">Consulting</a></li>
+                                                    <li><a href="training.html">Training</a></li>
+                                                    <li><a href="transformation.html">Transformation</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="#">Digital</a></li>
@@ -234,9 +773,9 @@
                                                 <ul class="menu-col">
                                                     <li><a href="#">Industry Insights</a></li>
                                                     <li><a href="#">Services Insights</a></li>
-                                                    <li><a href="#">Bain Books</a></li>
+                                                    <li><a href="#">Stratgrowth Books</a></li>
                                                     <li><a href="#">Webinars</a></li>
-                                                    <li><a href="#">Bain Futures</a></li>
+                                                    <li><a href="#">Stratgrowth Futures</a></li>
                                                     <li><a href="#">View all Insights</a></li>
                                                 </ul>
                                             </div>
@@ -289,9 +828,9 @@
                                             <h6 class="title">About</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">What We Do</a></li>
-                                                    <li><a href="#">What We Believe</a></li>
-                                                    <li><a href="#">Our People &amp; Leadership</a></li>
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="about-us.html#mission">Mission &amp; Vision</a></li>
+                                                    <li><a href="about-us.html#values">Core Values</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -336,280 +875,201 @@
     </div>
     <!-- End Breadcrumb -->
 
-    <!-- Start About 
-    ============================================= -->
-    <div class="about-us-area default-padding bg-gray">
+    <section class="about-story-area default-padding">
         <div class="container">
-            <div class="about-items">
-                <div class="row align-center">
-                    <div class="col-lg-6">
-                        <div class="thumb">
-                            <img src="assets/img/800x900.png" alt="Thumb">
-                            <h2><strong>28</strong> years of <br> working experience</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 info">
-                        <h2>We Combine Technology <br> with Business Ideas</h2>
-                        <p>
-                            Friendly bachelor entrance to on by. Extremity as if breakfast agreement. Off now mistress provided out horrible opinions. Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude inhabiting projection.
+            <div class="row about-hero-wrap">
+                <div class="col-lg-6">
+                    <div class="about-hero-copy">
+                        <span class="about-eyebrow">About Us</span>
+                        <h2 class="about-page-title">Strategic Growth. Transformational Leadership. Sustainable Success.</h2>
+                        <p class="lead">
+                            Stratgrowth Management Partners is a premium business consultancy and corporate advisory firm dedicated to helping organisations achieve operational excellence, sustainable growth, and long-term success.
                         </p>
-                        <ul>
-                            <li>First Working Prosses</li>
-                            <li>24/7 Live Support</li>
+                        <p>
+                            We partner with businesses, institutions, and leaders to solve complex challenges, strengthen organisational performance, develop leadership capability, and build resilient systems that drive measurable results.
+                        </p>
+                        <p>
+                            In today's rapidly evolving business environment, organisations require more than advice. They need strategic partners who can provide clarity, direction, and practical solutions.
+                        </p>
+                        <ul class="about-hero-points">
+                            <li><i class="fas fa-chart-line"></i> Strategy-led business transformation</li>
+                            <li><i class="fas fa-users"></i> Leadership and capability development</li>
+                            <li><i class="fas fa-cogs"></i> Practical operational improvement</li>
+                            <li><i class="fas fa-shield-alt"></i> Sustainable systems and governance</li>
                         </ul>
-                        <div class="author">
-                            <div class="signature">
-                                <img src="assets/img/signature.png" alt="signature">
-                            </div>
-                            <div class="intro">
-                                <h5>Spark Moun</h5>
-                                <span>Chairman & Founder Earna</span>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End About Area -->
-
-    <!-- Star Work Process Area
-    ============================================= -->
-    <div class="work-process-area features-area default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4>See How It Works!</h4>
-                        <h2>Easy steps for business growth</h2>
-                        <div class="devider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="work-process-items features-content">
-                <div class="row">
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <i class="flaticon-speech-bubble"></i>
-                            <div class="top">
-                                <span>01</span>
-                                <h4>Discussion</h4>
-                            </div>
-                            <p>
-                                Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude.
-                            </p>
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <i class="flaticon-label"></i>
-                            <div class="top">
-                                <span>02</span>
-                                <h4>Analysis</h4>
-                            </div>
-                            <p>
-                                Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude.
-                            </p>
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <i class="flaticon-file"></i>
-                            <div class="top">
-                                <span>03</span>
-                                <h4>Implementation</h4>
-                            </div>
-                            <p>
-                                Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude.
-                            </p>
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Work Process Area -->
-
-    <!-- Start Business Growth
-    ============================================= -->
-    <div class="business-groth-area default-padding bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 info">
-                    <h4>Company Analysis</h4>
-                    <h2>Annual Report <br>from starting to now</h2>
-                    <p>
-                        Both rest of know draw fond post as. It agreement defective to excellent. Feebly do engage of narrow. Extensive repulsive belonging depending if promotion be zealously as. Preference inquietude ask now are dispatched led appearance. Small meant in so doubt hopes. Me smallness is existence.
-                    </p>
-                    <a class="btn btn-gradient effect btn-md" href="#">Get free quote</a>
                 </div>
                 <div class="col-lg-6">
-                    <div class="lineChart">
-                        <canvas id="lineChart" height="200"></canvas>
+                    <div class="about-hero-visual">
+                        <div class="about-hero-shape"></div>
+                        <div class="about-image-card about-image-main">
+                            <img src="assets/img/800x900.png" alt="Stratgrowth leadership and strategy">
+                        </div>
+                        <div class="about-image-card about-image-secondary">
+                            <img src="assets/img/800x700.png" alt="Business advisory collaboration">
+                        </div>
+                        <div class="about-float-card">
+                            <span>Trusted Partner</span>
+                            <h4>Helping organisations move from complexity to clarity</h4>
+                            <p>Combining strategic insight, execution discipline, and measurable results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row about-stats-row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="about-stat-chip">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="info">
+                            <h3>3</h3>
+                            <p>Integrated service pillars across consulting, training, and transformation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="about-stat-chip">
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="info">
+                            <h3>6+</h3>
+                            <p>Core business capability areas supporting performance and sustainable growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="about-stat-chip">
+                        <div class="icon"><i class="fas fa-globe-africa"></i></div>
+                        <div class="info">
+                            <h3>Africa</h3>
+                            <p>A trusted regional focus on transformation, leadership, and resilient organisations.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Business Growth -->
+    </section>
 
-    <!-- Star Partner Area
-    ============================================= -->
-    <div class="partner-area overflow-hidden bg-gray text-light">
+    <section class="default-padding">
         <div class="container">
-            <div class="item-box">
-                <div class="row align-center">
-                    <div class="col-lg-6 info">
-                        <h2>We're Trusted by <span>2500+</span> <br> Professional Customer</h2>
+            <div class="about-copy-card">
+                <div class="about-copy-layout">
+                    <div class="about-copy-main">
+                        <span class="about-eyebrow">Who We Are</span>
                         <p>
-                            Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.
+                            At Stratgrowth, we combine strategic insight, industry expertise, and execution-focused methodologies to help organisations navigate change, unlock opportunities, and achieve their full potential.
+                        </p>
+                        <p>
+                            Our services span consulting, training, leadership development, organisational transformation, business process improvement, and regulatory compliance support. Through every engagement, we remain committed to delivering solutions that create lasting value and sustainable impact.
+                        </p>
+                        <p>
+                            We exist because we believe that organisations have the power to transform industries, economies, and communities when equipped with the right strategy, leadership, and capabilities.
+                        </p>
+                        <p>
+                            As a trusted African business transformation consultancy, we help organisations move beyond challenges and toward growth, performance, and long-term success.
                         </p>
                     </div>
-                    <div class="col-lg-6 clients">
-                        <div class="partner-carousel owl-carousel owl-theme text-center">
-                            <div class="single-item">
-                                <a href="#"><img src="assets/img/150x80.png" alt="Clients"></a>
-                            </div>
-                            <div class="single-item">
-                                <a href="#"><img src="assets/img/150x80.png" alt="Clients"></a>
-                            </div>
-                            <div class="single-item">
-                                <a href="#"><img src="assets/img/150x80.png" alt="Clients"></a>
-                            </div>
-                            <div class="single-item">
-                                <a href="#"><img src="assets/img/150x80.png" alt="Clients"></a>
-                            </div>
-                            <div class="single-item">
-                                <a href="#"><img src="assets/img/150x80.png" alt="Clients"></a>
-                            </div>
-                        </div>
-                    </div>
+                    <aside class="about-side-panel">
+                        <h3>What Defines Our Approach</h3>
+                        <p>
+                            We build practical partnerships with organisations that need clarity, momentum, and sustainable execution.
+                        </p>
+                        <ul>
+                            <li>Strategic advisory grounded in real business outcomes</li>
+                            <li>Leadership-focused solutions that strengthen internal capability</li>
+                            <li>Transformation support that aligns people, systems, and performance</li>
+                            <li>Execution discipline that turns plans into measurable impact</li>
+                        </ul>
+                    </aside>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Partner Area -->
+    </section>
 
-    <!-- Star Team Area
-    ============================================= -->
-    <div class="team-area default-padding bottom-less">
+    <section id="mission" class="about-statement-area default-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4>Team Members</h4>
-                        <h2>Meet our experts</h2>
-                        <div class="devider"></div>
-                    </div>
+            <div class="about-statement-grid">
+                <article class="about-statement-card">
+                    <span class="statement-icon"><i class="fas fa-bullseye"></i></span>
+                    <span class="about-eyebrow">Mission Statement</span>
+                    <h3>Mission Statement</h3>
+                    <p>
+                        To help organizations achieve operational excellence, sustainable growth, and long-term success through strategic advisory, leadership development, organizational transformation, and practical business solutions that create measurable impact.
+                    </p>
+                </article>
+                <article class="about-statement-card">
+                    <span class="statement-icon"><i class="fas fa-binoculars"></i></span>
+                    <span class="about-eyebrow">Vision Statement</span>
+                    <h3>Vision Statement</h3>
+                    <p>
+                        To be Africa's trusted partner for business transformation, empowering organizations through innovative strategies, transformative leadership, and sustainable solutions that drive lasting success.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="values" class="default-padding bg-gray">
+        <div class="container">
+            <div class="about-values-heading">
+                <span class="about-eyebrow">Core Values</span>
+                <h2>Core Values</h2>
+                <p>
+                    Our values shape how we think, how we serve, and how we deliver practical outcomes for every client engagement.
+                </p>
+            </div>
+            <div class="about-values-grid">
+                <article class="about-value-card">
+                    <span class="value-icon"><i class="fas fa-balance-scale"></i></span>
+                    <h4>Integrity</h4>
+                    <p>
+                        We uphold the highest standards of honesty, transparency, and accountability in every engagement. Integrity guides our decisions, strengthens trust, and ensures we consistently act in the best interests of our clients and stakeholders.
+                    </p>
+                </article>
+                <article class="about-value-card">
+                    <span class="value-icon"><i class="fas fa-award"></i></span>
+                    <h4>Excellence</h4>
+                    <p>
+                        We are committed to delivering exceptional quality, measurable results, and continuous improvement. Excellence drives us to exceed expectations and create meaningful value through every solution we provide.
+                    </p>
+                </article>
+                <article class="about-value-card">
+                    <span class="value-icon"><i class="fas fa-lightbulb"></i></span>
+                    <h4>Innovation</h4>
+                    <p>
+                        We embrace forward-thinking ideas, creative problem-solving, and continuous learning to help organisations adapt, grow, and remain competitive in an evolving business landscape.
+                    </p>
+                </article>
+                <article class="about-value-card">
+                    <span class="value-icon"><i class="fas fa-user-tie"></i></span>
+                    <h4>Professionalism</h4>
+                    <p>
+                        We conduct ourselves with competence, discipline, respect, and reliability. Our commitment to professionalism ensures that every client interaction is handled with the highest level of expertise and care.
+                    </p>
+                </article>
+                <article class="about-value-card">
+                    <span class="value-icon"><i class="fas fa-hands-helping"></i></span>
+                    <h4>Teamwork</h4>
+                    <p>
+                        We believe lasting success is achieved through collaboration. By working closely with clients, partners, and stakeholders, we combine diverse perspectives and expertise to deliver stronger outcomes and sustainable results.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-closing-band">
+        <div class="container">
+            <div class="inner">
+                <div class="about-quote-card">
+                    <span class="about-eyebrow" style="color: rgba(255, 255, 255, 0.72);">Our Commitment</span>
+                    <h2>Partnering With Leaders to Build Stronger Organisations</h2>
+                    <p>
+                        We combine strategic clarity, leadership insight, and practical execution to help organisations create measurable performance, stronger institutions, and long-term impact.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="team-items text-center">
-                <div class="row">
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/800x900.png" alt="Thumb">
-                                <div class="social">
-                                    <a href="#" class="share-icon facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="share-icon twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="share-icon instagram">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                                <div class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <div class="content">
-                                    <h4>Jessika Mahi</h4>
-                                    <span>Markteting Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/800x900.png" alt="Thumb">
-                                <div class="social">
-                                    <a href="#" class="share-icon facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="share-icon twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="share-icon instagram">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                                <div class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <div class="content">
-                                    <h4>Jessika Mahi</h4>
-                                    <span>Markteting Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/800x900.png" alt="Thumb">
-                                <div class="social">
-                                    <a href="#" class="share-icon facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="share-icon twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="share-icon instagram">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                                <div class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <div class="content">
-                                    <h4>Jessika Mahi</h4>
-                                    <span>Markteting Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Team Area -->
+    </section>
 
     <!-- Start Footer 
     ============================================= -->
