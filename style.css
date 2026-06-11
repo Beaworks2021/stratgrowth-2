@@ -807,6 +807,29 @@ a:hover, a:active {
 	width: 100%;
 }
 
+.btn-solid-theme {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 220px;
+	padding: 16px 34px;
+	border-radius: 999px;
+	background: #252062;
+	border: 2px solid #252062;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.2;
+	box-shadow: 0 16px 30px rgba(37, 32, 98, 0.22);
+}
+
+.btn-solid-theme:hover,
+.btn-solid-theme:focus {
+	background: #1c1748;
+	border-color: #1c1748;
+	color: #ffffff;
+}
+
 .btn-theme-border {
 	border: 2px solid #1273eb;
 	overflow: hidden;
