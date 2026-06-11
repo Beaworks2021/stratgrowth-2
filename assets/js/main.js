@@ -1,7 +1,7 @@
 /* ===================================================================
     
     Author          : Valid Theme
-    Template Name   : Earna - Consulting Business Template
+    Template Name   : Stratgrowth - Management Consultancy Company
     Version         : 1.0
     
 * ================================================================= */

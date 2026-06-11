@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Retail industry page for Stratgrowth">
+    <title>Stratgrowth - Retail</title>
+
+    <link rel="shortcut icon" href="../../assets/img/favi.png" type="image/x-icon">
+
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="../../assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="../../assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="../../assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="../../assets/css/animate.css" rel="stylesheet" />
+    <link href="../../assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="../../style.css" rel="stylesheet">
+    <link href="../../assets/css/responsive.css" rel="stylesheet" />
+
+    <style>
+        .rt-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(180deg, #f7f8fc 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+
+        .rt-hero h1 {
+            font-size: 56px;
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+
+        .rt-hero p.lead {
+            font-size: 22px;
+            line-height: 1.7;
+            max-width: 720px;
+            color: #5d6678;
+        }
+
+        .rt-hero .hero-art {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .rt-hero .hero-art img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .rt-stats,
+        .rt-copy,
+        .rt-ai,
+        .rt-future,
+        .rt-sector {
+            padding: 70px 0;
+        }
+
+        .rt-stat-item,
+        .rt-future-panel,
+        .rt-sector-card {
+            padding: 30px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+            height: 100%;
+        }
+
+        .rt-stat-item h2 {
+            font-size: 54px;
+            margin-bottom: 12px;
+            color: #252062;
+        }
+
+        .rt-copy p,
+        .rt-future-copy p,
+        .rt-future-panel p,
+        .rt-sector-card p {
+            font-size: 19px;
+            line-height: 1.85;
+            color: #374151;
+            margin-bottom: 24px;
+        }
+
+        .rt-list {
+            margin: 10px 0 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .rt-list li {
+            position: relative;
+            padding: 0 0 0 28px;
+            margin-bottom: 16px;
+            color: #374151;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .rt-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #252062;
+        }
+
+        .rt-ai {
+            background: #f8fafc;
+        }
+
+        .rt-ai-main {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.07);
+            overflow: hidden;
+        }
+
+        .rt-ai-copy {
+            padding: 42px 34px;
+        }
+
+        .rt-ai-copy h2,
+        .rt-future-copy h3 {
+            margin-bottom: 18px;
+        }
+
+        .rt-ai-copy p,
+        .rt-ai-copy li {
+            color: #5d6678;
+            line-height: 1.8;
+        }
+
+        .rt-ai-copy ul {
+            padding-left: 18px;
+            margin: 18px 0 0;
+        }
+
+        .rt-ai-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 420px;
+            object-fit: cover;
+        }
+
+        .rt-future {
+            background: #ffffff;
+        }
+
+        .rt-future-intro {
+            max-width: 760px;
+            margin: 0 auto 40px;
+        }
+
+        .rt-future-intro p {
+            font-size: 20px;
+            line-height: 1.9;
+            color: #374151;
+            margin-bottom: 0;
+        }
+
+        .rt-future-main {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.07);
+            overflow: hidden;
+        }
+
+        .rt-future-tabs {
+            background: #fff;
+            border-right: 1px solid #edf0f7;
+            height: 100%;
+        }
+
+        .rt-future-tabs .nav {
+            display: block;
+            margin: 0;
+        }
+
+        .rt-future-tabs .nav > li {
+            float: none;
+            margin: 0;
+        }
+
+        .rt-future-tabs .nav > li > a.rt-future-tab {
+            display: block;
+            margin: 0;
+            padding: 28px 26px;
+            border: 0;
+            border-bottom: 1px solid #edf0f7;
+            border-radius: 0;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #1f2937;
+        }
+
+        .rt-future-tabs .nav > li.active > a.rt-future-tab,
+        .rt-future-tabs .nav > li.active > a.rt-future-tab:hover,
+        .rt-future-tabs .nav > li.active > a.rt-future-tab:focus {
+            background: #e10600;
+            color: #fff;
+            position: relative;
+            border: 0;
+        }
+
+        .rt-future-tabs .nav > li.active > a.rt-future-tab:after {
+            content: "";
+            position: absolute;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-left: 14px solid #e10600;
+        }
+
+        .rt-future-pane img {
+            width: 100%;
+            display: block;
+            min-height: 260px;
+            object-fit: cover;
+        }
+
+        .rt-future-copy {
+            padding: 26px 30px 10px;
+        }
+
+        .rt-future-panel h4,
+        .rt-sector-card h4 {
+            margin-bottom: 14px;
+        }
+
+        .rt-sector-card .learn-more {
+            display: inline-block;
+            margin-top: 14px;
+            color: #e10600;
+            font-weight: 700;
+        }
+
+        .rt-band {
+            background: #252062;
+            padding: 75px 0;
+        }
+
+        .rt-band h2,
+        .rt-band p {
+            color: #fff;
+        }
+
+        .breadcrumb-area {
+            padding-top: 140px;
+            padding-bottom: 70px;
+        }
+
+        footer {
+            background: #111827;
+        }
+
+        footer p,
+        footer a,
+        footer li {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 767px) {
+            .rt-hero {
+                padding: 140px 0 70px;
+            }
+
+            .rt-hero h1 {
+                font-size: 40px;
+            }
+
+            .rt-copy p,
+            .rt-future-copy p,
+            .rt-list li,
+            .rt-future-panel p,
+            .rt-sector-card p {
+                font-size: 17px;
+            }
+
+            .rt-future-tab.active:after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div id="earna-preloader" class="earna-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="S" class="letters-loading">S</span>
+                    <span data-text-preloader="G" class="letters-loading">G</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header id="home">
+        <nav class="navbar navbar-default attr-bg navbar-fixed white no-background bootsnav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="../../index.html">
+                        <img src="../../assets/img/Stratgrowth-Logo-wt.png" class="logo logo-display" alt="Logo">
+                        <img src="../../assets/img/Stratgrowth-Logo.png" class="logo logo-scrolled" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Industries</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-12">
+                                            <h6 class="title">Industries</h6>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="agribusiness.html">Agribusiness</a></li>
+                                                    <li><a href="automotive.html">Automotive</a></li>
+                                                    <li><a href="construction-infrastructure.html">Construction &amp; Infrastructure</a></li>
+                                                    <li><a href="consumer-products.html">Consumer Products</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="financial-services.html">Financial Services</a></li>
+                                                    <li><a href="healthcare-life-sciences.html">Healthcare &amp; Life Sciences</a></li>
+                                                    <li><a href="machinery-equipment.html">Industrial Machinery &amp; Equipment</a></li>
+                                                    <li><a href="media-entertainment.html">Media &amp; Entertainment</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="oil-gas.html">Oil &amp; Gas</a></li>
+                                                    <li><a href="private-equity.html">Private Equity</a></li>
+                                                    <li><a href="retail.html">Retail</a></li>
+                                                    <li><a href="social-impact.html">Social Impact</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="technology.html">Technology</a></li>
+                                                    <li><a href="telecommunications.html">Telecommunications</a></li>
+                                                    <li><a href="transportation.html">Transportation</a></li>
+                                                    <li><a href="travel-leisure.html">Travel &amp; Leisure</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Our Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Consulting</a></li>
+                                <li><a href="#">Training</a></li>
+                                <li><a href="#">Transformation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Digital</a></li>
+
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Insights</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-3">
+                                            <h6 class="title">Insights</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Industry Insights</a></li>
+                                                    <li><a href="#">Services Insights</a></li>
+                                                    <li><a href="#">Bain Books</a></li>
+                                                    <li><a href="#">Webinars</a></li>
+                                                    <li><a href="#">Bain Futures</a></li>
+                                                    <li><a href="#">View all Insights</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <h6 class="title">Featured topics</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Tariff Response</a></li>
+                                                    <li><a href="#">Artificial Intelligence</a></li>
+                                                    <li><a href="#">Thriving in Uncertainty</a></li>
+                                                    <li><a href="#">Executive Conversations</a></li>
+                                                    <li><a href="#">Macro Trends</a></li>
+                                                    <li><a href="#">View all featured topics</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">B2B Growth Agenda</a></li>
+                                                    <li><a href="#">Private Equity Report</a></li>
+                                                    <li><a href="#">M&amp;A Report</a></li>
+                                                    <li><a href="#">Healthcare Private Equity Report</a></li>
+                                                    <li><a href="#">Technology Report</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-3">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">CEO Insights</a></li>
+                                                    <li><a href="#">CFO Insights</a></li>
+                                                    <li><a href="#">COO Insights</a></li>
+                                                    <li><a href="#">CIO Insights</a></li>
+                                                    <li><a href="#">CMO Insights</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >About</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-lg-6">
+                                            <h6 class="title">About</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">What We Do</a></li>
+                                                    <li><a href="#">What We Believe</a></li>
+                                                    <li><a href="#">Our People &amp; Leadership</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-lg-6">
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Client Results</a></li>
+                                                    <li><a href="#">Awards &amp; Recognition</a></li>
+                                                    <li><a href="#">Global Affiliations</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="../../career.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-area text-center shadow dark text-light bg-cover" style="background-image: url(../../assets/img/2440x1578.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1>Retail</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#">Industries</a></li>
+                        <li class="active">Retail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="rt-hero">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6">
+                    <h1>Retail</h1>
+                    <p class="lead">Achieve the scale and profit diversification essential for Retail Convergence.</p>
+                    <a class="btn btn-md circle btn-theme effect" href="#overview">Explore Overview</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-art">
+                        <img src="../../assets/img/1600x780.png" alt="Retail strategy and customer experience">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rt-stats">
+        <div class="container">
+            <div class="title">
+                <p>Our Experience</p>
+                <h2>Retail impact</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="rt-stat-item">
+                        <h2>3,900</h2>
+                        <p>projects completed over the last 10 years</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="rt-stat-item">
+                        <h2>70%</h2>
+                        <p>of the top 50 global retailers worked with us in the past decade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="rt-copy">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <p>
+                        The fast-changing world of retail demands adaptability. Our retail consultants know what it takes to stay out front. We pioneered the omnichannel concept a decade ago, and since then have been at the forefront of defining the future of retail.
+                    </p>
+                    <p>
+                        We’re now entering the age of Retail Convergence, in which traditional incumbent retailers and digital natives compete for the same customers, talent, profit pools, and shareholders. This convergence, along with new waves of technology, proliferating consumer touchpoints, and rising sustainability expectations, increases the urgency for all players to transform their core retail and digital capabilities.
+                    </p>
+                    <p>
+                        We have a proven track record of delivering measurable results, including increased sales, reduced costs, improved customer experience, impactful innovation, and higher shareholder value. Using proprietary analytics, software platforms, and deep customer insights, we help leading retailers use data, technology, and shopper trends to navigate uncertainty and leapfrog the competition.
+                    </p>
+                    <p>
+                        We collaborate with you to ensure you win with all stakeholders, customers, communities, NGOs, employees, suppliers, and shareholders, while future-proofing your business through strong partnerships, expert networks, and practical execution.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rt-future">
+        <div class="container">
+            <div class="title text-center">
+                <p>Future Of Retail</p>
+                <h2>Envision the Future of Retail</h2>
+            </div>
+            <div class="rt-future-intro">
+                <p>As retail thought leaders, we’ve always had our fingers on the pulse of the industry’s evolution. Today we see signs of a new Retail Convergence as emerging winners combine the execution of incumbents with the innovation of digital natives.</p>
+            </div>
+            <div class="rt-future-main">
+                <div class="row no-gutters">
+                    <div class="col-lg-3">
+                        <div class="rt-future-tabs">
+                            <ul class="nav" role="tablist">
+                                <li class="active"><a class="rt-future-tab" href="#rt-tab-1" data-toggle="tab">Omnichannel Retail Strategy and Innovation</a></li>
+                                <li><a class="rt-future-tab" href="#rt-tab-2" data-toggle="tab">Reimagined Customer Experience</a></li>
+                                <li><a class="rt-future-tab" href="#rt-tab-3" data-toggle="tab">Intelligent Retail Operations</a></li>
+                                <li><a class="rt-future-tab" href="#rt-tab-4" data-toggle="tab">Modern Retail Organization</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="tab-content">
+                            <div id="rt-tab-1" class="tab-pane fade in active rt-future-pane"><img src="../../assets/img/1500x700.png" alt="Omnichannel retail"><div class="rt-future-copy"><h3>Smart strategies to fortify your retail ecosystem</h3><ul class="rt-list"><li>Sharpen omnichannel strategy across stores and digital.</li><li>Use stronger data and insights to guide decisions.</li><li>Power growth through enterprise technology.</li><li>Capture stronger M&amp;A outcomes.</li></ul></div></div>
+                            <div id="rt-tab-2" class="tab-pane fade rt-future-pane"><img src="../../assets/img/1500x700.png" alt="Customer experience"><div class="rt-future-copy"><h3>Fuel growth one customer touchpoint at a time</h3><ul class="rt-list"><li>Use personalization to engage customers.</li><li>Benchmark experience performance more effectively.</li><li>Turn digital platforms into stronger revenue engines.</li></ul></div></div>
+                            <div id="rt-tab-3" class="tab-pane fade rt-future-pane"><img src="../../assets/img/1500x700.png" alt="Retail operations"><div class="rt-future-copy"><h3>Harness operational efficiency to win</h3><ul class="rt-list"><li>Reduce costs while growing categories.</li><li>Transform store operations and customer outcomes.</li><li>Sharpen pricing and footprint choices.</li><li>Reinvent the supply chain for advantage.</li></ul></div></div>
+                            <div id="rt-tab-4" class="tab-pane fade rt-future-pane"><img src="../../assets/img/1500x700.png" alt="Retail organization"><div class="rt-future-copy"><h3>Strengthen operations from the inside out</h3><ul class="rt-list"><li>Move faster with a more agile enterprise.</li><li>Embed ESG into core operations.</li><li>Execute strategy with a stronger operating model.</li></ul></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rt-ai">
+        <div class="container">
+            <div class="rt-ai-main">
+                <div class="row no-gutters align-center">
+                    <div class="col-lg-5">
+                        <div class="rt-ai-copy">
+                            <h2>AI in Retail</h2>
+                            <p>AI is redefining the retail experience for customers and employees alike while also streamlining back-office functions.</p>
+                            <ul>
+                                <li>Help customers find what they want faster.</li>
+                                <li>Deliver better personalization at the right moment.</li>
+                                <li>Support next-generation customer service and feedback loops.</li>
+                                <li>Improve inventory decisions and operating efficiency.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="rt-ai-image">
+                            <img src="../../assets/img/800x700.png" alt="AI in retail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rt-sector">
+        <div class="container">
+            <div class="title text-center">
+                <p>Sector Expertise</p>
+                <h2>Focused retail subsector experience</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="rt-sector-card">
+                        <h4>Grocery</h4>
+                        <p>Help grocery organizations build strategies that deliver near-term results while positioning the business to win in the future.</p>
+                        <span class="learn-more">Learn more</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="rt-sector-card">
+                        <h4>Fashion and Luxury</h4>
+                        <p>Support category leadership, sharper brand positioning, and competitive advantage for fashion and luxury businesses.</p>
+                        <span class="learn-more">Learn more</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="rt-sector-card">
+                        <h4>Restaurants</h4>
+                        <p>Reinvent restaurant models to respond to rapid shifts in innovation, consumer behavior, and digital technology.</p>
+                        <span class="learn-more">Learn more</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rt-band">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-8">
+                    <h2>Ready to lead through Retail Convergence?</h2>
+                    <p>Partner with Stratgrowth to modernize your retail model, create new profit streams, and build durable customer advantage.</p>
+                </div>
+                <div class="col-lg-4 text-lg-right text-left">
+                    <a class="btn btn-light effect btn-md" href="../../contact.html">Talk to Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="default-padding text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img src="../../assets/img/Stratgrowth-Logo-wt.png" alt="Stratgrowth" style="max-width: 220px; margin-bottom: 20px;">
+                    <p>Stratgrowth helps leaders turn complexity into clarity with strategy, operational discipline, and measurable growth.</p>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Quick Links</h4>
+                    <ul class="link-list">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="private-equity.html">Private Equity</a></li>
+                        <li><a href="retail.html">Retail</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Contact</h4>
+                    <p>Email: hello@stratgrowth.com</p>
+                    <p>Phone: +1 (000) 000-0000</p>
+                    <p>Helping clients navigate change with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/jquery.appear.js"></script>
+    <script src="../../assets/js/jquery.easing.min.js"></script>
+    <script src="../../assets/js/owl.carousel.min.js"></script>
+    <script src="../../assets/js/circle-progress.js"></script>
+    <script src="../../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../../assets/js/magnific-popup.min.js"></script>
+    <script src="../../assets/js/count-to.js"></script>
+    <script src="../../assets/js/wow.min.js"></script>
+    <script src="../../assets/js/bootsnav.js"></script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>

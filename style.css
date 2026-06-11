@@ -1,6 +1,6 @@
 /* ----------------------------------
 
-Template Name: Earna - Consulting Business Template
+Template Name: Stratgrowth - Management Consultancy Company
 Author: validtheme
 Description:
 Version: 1.0.2
@@ -1934,6 +1934,11 @@ body,
 	line-height: 1.2;
 }
 
+.banner-area.text-big h2.banner-title--long {
+	font-size: clamp(56px, 7vw, 112px);
+	line-height: clamp(52px, 6vw, 98px);
+}
+
 .banner-area.text-big a.btn {
 	margin-top: 20px;
 }
@@ -2940,6 +2945,15 @@ body,
 	margin-bottom: 30px;
 }
 
+.services-area .services-items .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.services-area .services-items .single-item {
+	display: flex;
+}
+
 .services-area .services-items .single-item .item {
 	padding: 60px 30px;
 	background: #ffffff;
@@ -2948,6 +2962,9 @@ body,
 	z-index: 1;
 	transition: all 0.35s ease-in-out;
 	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 .services-area.inc-thumbnail .services-items .single-item .item {
@@ -2961,6 +2978,9 @@ body,
 	position: relative;
 	top: -45px;
 	margin-bottom: -45px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 }
 
 .services-area .services-items .single-item .item::after {
@@ -3027,7 +3047,7 @@ body,
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 20px;
+	margin-top: auto;
 	position: relative;
 	z-index: 1;
 }
@@ -3301,17 +3321,14 @@ body,
 	transition: all 0.35s ease-in-out;
 }
 
-.thumb-services-area .services-items .single-item .item:hover::after,
-.thumb-services-area .services-items .single-item:first-child .item::after {
+.thumb-services-area .services-items .single-item .item:hover::after {
 	opacity: 0;
 }
 
-.thumb-services-area .services-items .single-item .item:hover::before,
-.thumb-services-area .services-items .single-item:first-child .item::before {
+.thumb-services-area .services-items .single-item .item:hover::before {
 	height: 100%;
 }
 
-.thumb-services-area .services-items .single-item:first-child .item .info > i,
 .thumb-services-area .services-items .single-item .item:hover .info > i {
 	background: #ffffff;
 	color: #1273eb;
@@ -3324,9 +3341,6 @@ body,
 	transition: all 0.35s ease-in-out;
 }
 
-.thumb-services-area .services-items .single-item:first-child .item h4, 
-.thumb-services-area .services-items .single-item:first-child .item p, 
-.thumb-services-area .services-items .single-item:first-child .item a,
 .thumb-services-area .services-items .single-item .item:hover h4, 
 .thumb-services-area .services-items .single-item .item:hover p, 
 .thumb-services-area .services-items .single-item .item:hover a {
@@ -3345,11 +3359,6 @@ body,
 	font-size: 12px;
 	margin-right: 3px;
 }
-
-.thumb-services-area .services-items .single-item:first-child .item .bottom a {
-	border-color: rgba(255, 255, 255, 0.5);
-}
-
 
 /* ============================================================== 
      # Services Default
