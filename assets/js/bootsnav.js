@@ -246,6 +246,25 @@
                     // Dropdown Fade Toggle
                     $("a.dropdown-toggle", this).off('click');
                     $("a.dropdown-toggle", this).on('click', function (e) {
+                        // #region debug-point E:bootsnav-dropdown-toggle
+                        fetch("http://127.0.0.1:7777/event", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                sessionId: "industries-mobile-menu",
+                                runId: "pre-fix",
+                                hypothesisId: "E",
+                                location: "assets/js/bootsnav.js:248",
+                                msg: "[DEBUG] bootsnav dropdown-toggle click",
+                                data: {
+                                    label: $.trim($(this).text()),
+                                    parentOnBefore: $(this).closest("li.dropdown").first().hasClass("on"),
+                                    menuVisibleBefore: $(this).closest("li.dropdown").find(".dropdown-menu").first().is(":visible")
+                                },
+                                ts: Date.now()
+                            })
+                        }).catch(function(){});
+                        // #endregion
                         e.stopPropagation();
                         $(this).closest("li.dropdown").find(".dropdown-menu").first().stop().fadeToggle().toggleClass(getIn);
                         $(this).closest("li.dropdown").first().toggleClass("on");                        
@@ -267,8 +286,35 @@
                             $(".content", this).stop().fadeOut();
                             $(".title", this).off("click");
                             $(".title", this).on("click", function(){
-                                $(this).closest(".col-menu").find(".content").stop().fadeToggle().addClass(getIn);
-                                $(this).closest(".col-menu").toggleClass("on");
+                            // #region debug-point F:bootsnav-title-click
+                            fetch("http://127.0.0.1:7777/event", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    sessionId: "industries-mobile-menu",
+                                    runId: "pre-fix",
+                                    hypothesisId: "F",
+                                    location: "assets/js/bootsnav.js:269",
+                                    msg: "[DEBUG] bootsnav mega-menu title click",
+                                    data: {
+                                        title: $.trim($(this).text()),
+                                        contentCount: $(this).closest(".col-menu").find(".content").length,
+                                        contentVisibleBefore: $(this).closest(".col-menu").find(".content").is(":visible")
+                                    },
+                                    ts: Date.now()
+                                })
+                            }).catch(function(){});
+                            // #endregion
+                                var $colMenu = $(this).closest(".col-menu");
+                                var $ownContent = $colMenu.children(".content");
+                                var $targetContent = $ownContent.length ? $ownContent : $colMenu.siblings(".col-menu").children(".content");
+                                var shouldOpen = !$targetContent.first().is(":visible");
+                                if (shouldOpen) {
+                                    $targetContent.stop(true, true).fadeIn().addClass(getIn);
+                                } else {
+                                    $targetContent.stop(true, true).fadeOut();
+                                }
+                                $colMenu.toggleClass("on", shouldOpen);
                                 return false;
                             });
 
@@ -585,4 +631,3 @@
     });
     
 }(jQuery));
-

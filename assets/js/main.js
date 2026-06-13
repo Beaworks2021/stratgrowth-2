@@ -414,28 +414,128 @@
             });
         });
 
+        // #region debug-point A:report-helper
+        function reportDebugEvent(hypothesisId, location, msg, data) {
+            fetch("http://127.0.0.1:7777/event", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    sessionId: "industries-mobile-menu",
+                    runId: "pre-fix",
+                    hypothesisId: hypothesisId,
+                    location: location,
+                    msg: "[DEBUG] " + msg,
+                    data: data || {},
+                    ts: Date.now()
+                })
+            }).catch(function() {});
+        }
+        // #endregion
+
+        /* ==================================================
+            # Mobile Mega Menu Helpers
+        ================================================== */
+        function isMobileNavActive() {
+            return $('.navbar-toggle').is(':visible') || window.innerWidth < 1024;
+        }
+
+        function openMobileDropdown($parent) {
+            var $menu = $parent.children('.dropdown-menu');
+
+            $('nav.navbar.bootsnav li.dropdown')
+                .not($parent)
+                .removeClass('on')
+                .children('.dropdown-menu')
+                .stop(true, true)
+                .fadeOut();
+
+            $parent.addClass('on');
+            $menu.stop(true, true).fadeIn();
+
+            // Mega menu columns without a title are inaccessible on mobile by default.
+            $menu.find('.col-menu').each(function() {
+                var $column = $(this);
+                var $content = $column.children('.content');
+
+                if ($content.length && !$column.children('.title').length) {
+                    $content.stop(true, true).show();
+                }
+            });
+
+            // #region debug-point B:open-mobile-dropdown
+            reportDebugEvent('B', 'assets/js/main.js:openMobileDropdown', 'mobile dropdown opened', {
+                label: $.trim($parent.children('a.dropdown-toggle').text()),
+                parentOn: $parent.hasClass('on'),
+                menuVisible: $menu.is(':visible'),
+                visibleContentCount: $menu.find('.col-menu > .content:visible').length,
+                totalContentCount: $menu.find('.col-menu > .content').length,
+                titledColumnCount: $menu.find('.col-menu > .title').length
+            });
+            // #endregion
+        }
+
         /* ==================================================
             # Our Services Mobile Dropdown
         ================================================== */
         $(document).on('click', 'nav.navbar.bootsnav li.dropdown > a[href$="services.html"]', function(e) {
-            var isMobileNav = $('.navbar-toggle').is(':visible') || window.innerWidth < 1024;
             var $trigger = $(this);
             var $parent = $trigger.parent('li.dropdown');
             var $menu = $parent.children('.dropdown-menu');
 
-            if (!isMobileNav || !$menu.length) {
+            // #region debug-point C:services-trigger
+            reportDebugEvent('C', 'assets/js/main.js:services-click', 'services top-level click', {
+                label: $.trim($trigger.text()),
+                isMobileNav: isMobileNavActive(),
+                menuExists: !!$menu.length,
+                parentOnBefore: $parent.hasClass('on')
+            });
+            // #endregion
+
+            if (!isMobileNavActive() || !$menu.length) {
                 return;
             }
 
             if (!$parent.hasClass('on')) {
                 e.preventDefault();
-                $('nav.navbar.bootsnav li.dropdown').not($parent).removeClass('on').children('.dropdown-menu').stop(true, true).fadeOut();
-                $parent.addClass('on');
-                $menu.stop(true, true).fadeIn();
+                openMobileDropdown($parent);
                 return;
             }
 
             window.location.href = $trigger.attr('href');
+        });
+
+        /* ==================================================
+            # Industries / Hash Dropdowns On Mobile
+        ================================================== */
+        $(document).on('click', 'nav.navbar.bootsnav li.dropdown > a[href="#"]', function(e) {
+            var $trigger = $(this);
+            var $parent = $trigger.parent('li.dropdown');
+            var $menu = $parent.children('.dropdown-menu');
+
+            // #region debug-point D:hash-trigger
+            reportDebugEvent('D', 'assets/js/main.js:hash-click', 'hash dropdown top-level click', {
+                label: $.trim($trigger.text()),
+                isMobileNav: isMobileNavActive(),
+                menuExists: !!$menu.length,
+                parentOnBefore: $parent.hasClass('on')
+            });
+            // #endregion
+
+            if (!isMobileNavActive() || !$menu.length) {
+                return;
+            }
+
+            e.preventDefault();
+
+            if ($parent.hasClass('on')) {
+                $parent.removeClass('on');
+                $menu.stop(true, true).fadeOut();
+                return;
+            }
+
+            openMobileDropdown($parent);
         });
 
         $(document).on('click', function(e) {
