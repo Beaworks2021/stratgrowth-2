@@ -544,6 +544,47 @@
             }
         });
 
+
+        /* ==================================================
+            # Gallery Carousel Modal Popup
+         ===============================================*/
+        $('.popup-gallery-carousel').magnificPopup({
+            type: 'inline',
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'mfp-fade gallery-carousel-popup',
+            overflowY: 'auto',
+            callbacks: {
+                open: function() {
+                    var content = this.content;
+                    var carousel = content.find('.gallery-modal-carousel');
+                    // Initialize carousel after popup opens so dimensions are correct
+                    setTimeout(function() {
+                        carousel.owlCarousel({
+                            loop: true,
+                            nav: true,
+                            dots: true,
+                            margin: 10,
+                            items: 1,
+                            autoplay: false,
+                            navText: [
+                                "<i class='fa fa-angle-left'></i>",
+                                "<i class='fa fa-angle-right'></i>"
+                            ],
+                            smartSpeed: 600
+                        });
+                    }, 100);
+                },
+                beforeClose: function() {
+                    var content = this.content;
+                    var carousel = content.find('.gallery-modal-carousel');
+                    if (carousel.length && carousel.data('owlCarousel')) {
+                        carousel.trigger('destroy.owl.carousel');
+                    }
+                }
+            }
+        });
+
     }); // end document ready function
 
 
